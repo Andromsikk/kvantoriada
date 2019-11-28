@@ -1,0 +1,34 @@
+body {
+  
+background-image: url("../img/gradirnt-bak.jpg");
+background-size: 50%;
+
+  
+}
+.item-content{
+    background-color: rgb(226, 226, 226);
+   
+    border-width: thick;
+border-style: solid;
+border-color: black;
+display: inline-block;
+margin: 150px;
+padding: 5px;
+  
+}
+.text{
+    font-family: "BankGothic RUSS";
+    
+
+
+@font-face {
+
+    font-family: "BankGothic RUSS" ; /* Имя шрифта */
+    
+    src: url("../img/russ.ttf"); /* Путь к файлу со шрифтом */
+    
+    }
+   
+    a{
+        text-decoration: none;
+    }

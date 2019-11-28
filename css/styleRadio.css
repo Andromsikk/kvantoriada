@@ -1,0 +1,56 @@
+body {
+  
+    background-image: url("../img/backgr.jpg");
+    background-size: 100%;
+    }
+    
+
+.text{
+    font-family: "BankGothic RUSS" ;
+    font-weight: bold;
+}
+
+    
+@font-face {
+
+    font-family: "BankGothic RUSS" ; /* Имя шрифта */
+    
+    src: url("../img/russ.ttf"); /* Путь к файлу со шрифтом */
+    
+    }
+.item-content{
+    background-color: rgba(255, 255, 255, 0.658);
+   
+    border-width: 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.767);
+text-align: center;
+display:inline-block;
+
+
+}
+.button{
+    width: 30%;
+    height: 50px;
+}
+/*чекбокс*/
+.check{
+    height: 20px;
+    width: 20px;
+}
+.text1{
+    font-weight: normal;
+    font-family: "BankGothic RUSS" ;
+}
+
+main{
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr)  minmax(10px, 1fr) minmax(10px, 1fr);;
+}
+@media screen and (max-width: 990px)  {
+    main{
+        grid-template-columns: minmax(10px, 1fr)  minmax(10px, 50fr) minmax(10px, 1fr);
+        
+    }
+    
+  }
