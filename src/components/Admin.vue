@@ -54,26 +54,52 @@
       >
         <v-expansion-panel>
           <v-expansion-panel-header>Ваш тариф</v-expansion-panel-header>
-          <v-expansion-panel-content>
-            Some content
+          <v-expansion-panel-content class="d-flex mb-0 pb-0">
+              <section class="d-flex mb-0 pb-0">
+              <span>Солненая Панель<br>3₽/кВт</span>
+            <v-switch v-model="switch2" :label="``" class="d-flex ma-0 ml-3 pa-0"></v-switch>
+            <span>Аккумулятор<br>5₽/кВт</span>
+              </section>
           </v-expansion-panel-content>
         </v-expansion-panel>
   
         <v-expansion-panel>
           <v-expansion-panel-header>Счет на оплату</v-expansion-panel-header>
           <v-expansion-panel-content>
-            Some content
+             <section class="d-fle mb-0 pb-0">
+              <p><strong>Вы работаете:</strong>  15:23:43 сек</p>
+              <span><strong>Суммак к оплате:</strong> 4565₽</span>
+              <v-btn color="cyan lighten-1 pl-5" text>оплатить</v-btn>
+              
+            
+           
+              </section>
           </v-expansion-panel-content>
         </v-expansion-panel>
   
         <v-expansion-panel>
           <v-expansion-panel-header>Квитанции на оплату</v-expansion-panel-header>
           <v-expansion-panel-content>
-            Some content
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
-           
+            <v-simple-table height="250px">
+                <template v-slot:default>
+                <thead>
+                    <tr>
+                    <th class="text-left">Время работы</th>
+                    <th class="text-left">Оплачено,₽</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="lab in desserts" :key="lab.name">
+                    <td>{{ lab.name }}</td>
+                    <td>{{ lab.calories }}</td>
+                    </tr>
+                </tbody>
+                </template>
+            </v-simple-table>
+                    </v-expansion-panel-content>
+                    </v-expansion-panel>
+                </v-expansion-panels>
+                    
         </section>        
 
                 
@@ -93,15 +119,13 @@
   </v-card>
 </template>
 
-<script>
-  export default {
-    data: () => ({
-      show: false,
-      show2: false,
-      show3: false,
-    }),
-  }
-</script>
+
+
+
+
+
+
+
 
 <script>
   export default {
@@ -109,16 +133,22 @@
       return {
         switch1: false,
         switch2: false,
+        items: ['Человечская музыка', 'Шрек musik', 'Jazz', 'Rock'],
+        desserts: [
+          {
+            name: '1:45:67',
+            calories: 159,
+          },
+          {
+            name: '1:45:67',
+            calories: 237,
+          },
+          {
+            name: '1:45:67',
+            calories: 518,
+          },
+        ],
       }
     },
-  }
-</script>
-
-
-<script>
-  export default {
-    data: () => ({
-      items: ['Человечская музыка', 'Шрек musik', 'Jazz', 'Rock'],
-    }),
   }
 </script>

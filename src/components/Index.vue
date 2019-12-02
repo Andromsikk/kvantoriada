@@ -1,151 +1,88 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12" sm="4" md="4">
-        <v-layout
-                text-center
-                wrap
-        >
+     <v-card
+    class="mx-auto my-10"
+    max-width="400"
+  >
+    <v-img
+      src="http://rk.karelia.ru/wp-content/uploads/2019/11/p8tv0lom4xcsg808s0k-1280x720.jpg"
+      height="200px"
+    ></v-img>
 
-          <v-flex mb-4>
-            <h1 class="display-2 font-weight-bold mb-3">
-              Welcome to POLLs
-            </h1>
-            <p class="subheading font-weight-regular">
-              Service to manage your polls in one place
-            </p>
-            <v-layout row class="text-xs-center"
-                      text-center
-                      wrap
-            >
-              <v-flex xs-2>
-                <v-card flat>
-                       
+    <v-card-title>
+      Кванториада 2019
+    </v-card-title>
+    <v-card-subtitle class=" pl-5">
+        Карельские Энергетики
+      </v-card-subtitle>
+  
 
-
-
-                      <v-form>
-                        <v-container fluid>
-                          <v-row>
-
-                            <v-col cols="12" sm="6">
-                              <v-text-field
-                                v-model="password"
-                                :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                                :rules="[rules.required, rules.min]"
-                                :type="show1 ? 'text' : 'password'"
-                                name="input-10-1"
-                                label="пароль"
-                                hint="At least 4 characters"
-                                counter
-                                @click:append="show1 = !show1"
-                              ></v-text-field>
-                            </v-col>
-
-                            
-                           
-
-                          </v-row>
-                        </v-container>
-                      </v-form>
+   
+ 
+        
+        
+            
 
 
+            <v-col class="d-flex ma-0 pa-0 algin-center" cols="12" sm="8">
+        
+              <v-select
+              :items="items"
+              label="Имя пользователя"
+              class="ma-0 pa-0 ml-6 "
+              ></v-select>
+          </v-col>
+   <section class="d-flex ">
+           <v-col cols="12" sm="6" class="ma-0 pa-0 pl-6 d-flex">
+              <v-text-field
+                v-model="password"
+                :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                :rules="[rules.required, rules.min]"
+                :type="show1 ? 'text' : 'password'"
+                name="input-10-1"
+                label="пароль"
+                hint="At least 4 characters"
+                counter
+                class="ma-0 pa-0 "
+                @click:append="show1 = !show1"
+              ></v-text-field>
+            </v-col>
+           
+            <span class="ma-0 pa-0 pl-5 mb-5 d-flex"><v-btn color="cyan lighten-1 " text>Войти</v-btn></span>
+
+          
+
+    </section>
+
+
+  
+                
+
+     
+
+   
+
+
+
+    
+    
 
 
 
 
-                </v-card>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-        </v-layout>
-      </v-col>
-               
-      <v-spacer></v-spacer>
-      <v-col cols="12" sm="8" md="8">
-        <v-timeline :dense="$vuetify.breakpoint.smAndDown">
-          <v-timeline-item
-                  color="purple lighten-2"
-                  fill-dot
-                  right
-          >
-            <v-card>
-              <v-card-title class="purple lighten-2">
-                <v-icon
-                        dark
-                        size="42"
-                        class="mr-4"
-                >
-                  mdi-account
-                </v-icon>
-                <h2 class="headline white--text font-weight-light">Sign UP</h2>
-              </v-card-title>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    Sign UP or login in polls
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item
-                  color="green lighten-1"
-                  fill-dot
-                  right
-          >
-            <v-card>
-              <v-card-title class="green lighten-1">
-                <v-icon
-                        dark
-                        size="42"
-                        class="mr-4"
-                >
-                  mdi-view-grid-plus-outline
-                </v-icon>
-                <h2 class="headline white--text font-weight-light">Add your subs</h2>
-              </v-card-title>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    Take polls from different companies
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item
-                  color="cyan lighten-1"
-                  fill-dot
-                  right
-          >
-            <v-card>
-              <v-card-title class="cyan lighten-1">
-                <v-icon
-                        class="mr-4"
-                        dark
-                        size="42"
-                >
-                  mdi-file-tree
-                </v-icon>
-                <h2 class="headline white--text font-weight-light">Manage</h2>
-              </v-card-title>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    Bla bla bla
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
-      </v-col>
-    </v-row>
-  </v-container>
+  </v-card>
 </template>
+
+
+
+
+
+
+
+
+
+
+    
+
 
 
 
@@ -159,14 +96,11 @@
 
 
 <script>
-
- 
-  
   export default {
     data () {
       return {
         show1: false,
-      
+        items: ['Колесо обозрения', 'Сцена', 'Радио', 'Освещение','Умная грядка','Admin'],
         password: '',
         rules: {
           required: value => !!value || 'Required.',
@@ -177,3 +111,5 @@
     },
   }
 </script>
+
+
