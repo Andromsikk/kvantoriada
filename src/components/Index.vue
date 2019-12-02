@@ -20,23 +20,47 @@
             >
               <v-flex xs-2>
                 <v-card flat>
-                  <v-form>
-                    <v-col cols="12" sm="12" md="12">
-                      <v-text-field label="Username" required></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="12" md="12">
-                      <v-text-field label="Password" required></v-text-field>
-                    </v-col>
-                    <v-card-actions>
-                      <v-btn primary large block>Login</v-btn>
-                    </v-card-actions>
-                  </v-form>
+                       
+
+
+
+                      <v-form>
+                        <v-container fluid>
+                          <v-row>
+
+                            <v-col cols="12" sm="6">
+                              <v-text-field
+                                v-model="password"
+                                :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                                :rules="[rules.required, rules.min]"
+                                :type="show1 ? 'text' : 'password'"
+                                name="input-10-1"
+                                label="пароль"
+                                hint="At least 4 characters"
+                                counter
+                                @click:append="show1 = !show1"
+                              ></v-text-field>
+                            </v-col>
+
+                            
+                           
+
+                          </v-row>
+                        </v-container>
+                      </v-form>
+
+
+
+
+
+
                 </v-card>
               </v-flex>
             </v-layout>
           </v-flex>
         </v-layout>
       </v-col>
+               
       <v-spacer></v-spacer>
       <v-col cols="12" sm="8" md="8">
         <v-timeline :dense="$vuetify.breakpoint.smAndDown">
@@ -123,14 +147,33 @@
   </v-container>
 </template>
 
-<script>
-  export default {
-    data: () => ({}),
-  }
-</script>
+
+
 
 <style>
   .v-application .mb-6 {
     margin-bottom: 26px !important;
   }
 </style>
+
+
+
+<script>
+
+ 
+  
+  export default {
+    data () {
+      return {
+        show1: false,
+      
+        password: '',
+        rules: {
+          required: value => !!value || 'Required.',
+          min: v => v.length >= 4 || 'Min 4 characters',
+          emailMatch: () => ('The email and password you entered don\'t match'),
+        },
+      }
+    },
+  }
+</script>

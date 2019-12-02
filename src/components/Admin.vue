@@ -38,87 +38,53 @@
                 <v-slider
                 v-model="slider"
                 thumb-label
-                class="pl-1 ma-0"
+                class="ma-0"
                 ></v-slider>
               
         </v-container>
+        
     </section>
 
 
-    <v-card-actions>
-         <v-card-text class="py-0">
-        <h3>Ваш тариф</h3> 
-        </v-card-text>
-        
+        <section>
+              <v-expansion-panels
+        v-model="panel"
+        :disabled="disabled"
+        multiple
+      >
+        <v-expansion-panel>
+          <v-expansion-panel-header>Ваш тариф</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            Some content
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+  
+        <v-expansion-panel>
+          <v-expansion-panel-header>Счет на оплату</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            Some content
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+  
+        <v-expansion-panel>
+          <v-expansion-panel-header>Квитанции на оплату</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            Some content
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+           
+        </section>        
 
-        <v-spacer></v-spacer>
-        <v-btn
-            icon
-            @click="show = !show"
-        >
-            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-        </v-btn>
-    </v-card-actions>
+                
 
+     
 
    
 
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-        <v-card-text>
-          I'm a thing. But
-        </v-card-text>
-            </div>
-    </v-expand-transition>
-
-    <v-card-actions>
-          <v-card-text class="py-0">
-        <h3>Счет на Оплату</h3> 
-        </v-card-text>
-        
-         <v-spacer></v-spacer>
-        <v-btn
-                icon
-                @click="show2 = !show2"
-            >
-                <v-icon>{{ show2 ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-            </v-btn>
-    </v-card-actions>
 
 
-
-    <v-expand-transition>
-        <div v-show="show2">
-        <v-divider></v-divider>
-        <v-card-text>
-        I'm a thing. But
-        </v-card-text>
-        </div>
-    </v-expand-transition>
-
-    <v-card-actions>
-          <v-card-text class="py-0">
-        <h3>Счета Квитанции</h3> 
-        </v-card-text>
-        
-         <v-spacer></v-spacer>
-        <v-btn
-                icon
-                @click="show3 = !show3"
-            >
-                <v-icon>{{ show3 ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-            </v-btn>
-    </v-card-actions>
-
-     <v-expand-transition>
-        <div v-show="show3">
-        <v-divider></v-divider>
-        <v-card-text>
-        I'm a thing. But
-        </v-card-text>
-        </div>
-    </v-expand-transition>
+    
     
 
 
@@ -156,4 +122,3 @@
     }),
   }
 </script>
-
