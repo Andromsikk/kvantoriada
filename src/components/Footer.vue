@@ -37,6 +37,16 @@
                 Dashboard
             </v-btn>
             </router-link>
+            <router-link to="/wheell" style="text-decoration: none; color: white">
+            <v-btn
+                    color="white"
+                    text
+                    rounded
+                    class="my-2"
+            >
+                radio
+            </v-btn>
+            </router-link>
             <router-link to="/test" style="text-decoration: none; color: white">
                 <v-btn
                         color="white"

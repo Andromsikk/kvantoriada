@@ -16,7 +16,7 @@
     <section>
         <v-container fluid class="d-flex mb-0 pb-0">
             <h3 class="pl-3">Подача тока</h3>
-            <v-switch v-model="switch1" :label="``" class="ma-0 ml-3 pa-0"></v-switch> on
+            <span  @click="but = !but"><v-switch  v-model="switch1" :label="``" class="ma-0 ml-3 pa-0" ></v-switch></span><span>{{but ? 'on' : 'off'}}</span>
             
         </v-container>
         
@@ -89,9 +89,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="lab in desserts" :key="lab.name">
-                    <td>{{ lab.name }}</td>
-                    <td>{{ lab.calories }}</td>
+                    <tr v-for="pay in pays" :key="pay.name">
+                    <td>{{ pay.name }}</td>
+                    <td>{{ pay.calories }}</td>
                     </tr>
                 </tbody>
                 </template>
@@ -131,13 +131,14 @@
   export default {
     data () {
       return {
+        but:false, 
         switch1: false,
         switch2: false,
         items: ['Человечская музыка', 'Шрек musik', 'Jazz', 'Rock'],
-        desserts: [
+        pays: [
           {
             name: '1:45:67',
-            calories: 159,
+            calories: 157,
           },
           {
             name: '1:45:67',
