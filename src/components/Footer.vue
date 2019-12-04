@@ -37,25 +37,54 @@
                 Dashboard
             </v-btn>
             </router-link>
-            <router-link to="/wheell" style="text-decoration: none; color: white">
+            <router-link to="/wheel" style="text-decoration: none; color: white">
             <v-btn
                     color="white"
                     text
                     rounded
                     class="my-2"
             >
-                radio
+                Whell
             </v-btn>
             </router-link>
-            <router-link to="/test" style="text-decoration: none; color: white">
+            <router-link to="/scene" style="text-decoration: none; color: white">
                 <v-btn
                         color="white"
                         text
                         rounded
                         class="my-2"
                 >
-                    Test
+                    Scene
                 </v-btn>
+            </router-link> <router-link to="/radio" style="text-decoration: none; color: white">
+                <v-btn
+                        color="white"
+                        text
+                        rounded
+                        class="my-2"
+                >
+                    Radio
+                </v-btn>
+            </router-link>
+             <router-link to="/light" style="text-decoration: none; color: white">
+                <v-btn
+                        color="white"
+                        text
+                        rounded
+                        class="my-2"
+                >
+                    Light
+                </v-btn>
+                 <router-link to="/smartgr" style="text-decoration: none; color: white">
+                <v-btn
+                        color="white"
+                        text
+                        rounded
+                        class="my-2"
+                >
+                    SmartGr
+                </v-btn>
+            </router-link>
             </router-link>
             <v-col
                     class="py-4 text-center white--text"

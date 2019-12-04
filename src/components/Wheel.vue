@@ -4,44 +4,25 @@
     max-width="400"
   >
     <v-img
-      src="https://cdn.pixabay.com/photo/2015/04/23/17/18/disney-736374__480.jpg"
+      src="https://nikatv.ru/public/upload/news/26565/images/3138.jpg"
       height="200px"
     ></v-img>
 
     <v-card-title>
-      ВЫ: Сцена
+      ВЫ: Колесо обозрения
     </v-card-title>
 
    
     <section>
         <v-container fluid class="d-flex mb-0 pb-0">
             <h3 class="pl-3">Подача тока</h3>
-            <v-switch v-model="switch1" :label="``" class="ma-0 ml-3 pa-0"></v-switch> on
+            <span  @click="but = !but"><v-switch  v-model="switch1" :label="``" class="ma-0 ml-3 pa-0" ></v-switch></span><span>{{but ? 'on' : 'off'}}</span>
             
         </v-container>
         
           
 
-        <v-col class="d-flex ma-0 pa-0 algin-center" cols="12" sm="8">
-            <h3 class=" pl-6">Трек:</h3>
-            <v-select
-            :items="items"
-            label="Выберети музыку"
-            class="ma-0 pa-0 ml-3 "
-            ></v-select>
-        </v-col>
-
-        <v-container fluid class="d-flex mb-0 pb-0">
-            <h3 class="pl-3">Громкость:</h3>
-             
-               
-                <v-slider
-                v-model="slider"
-                thumb-label
-                class="ma-0"
-                ></v-slider>
-              
-        </v-container>
+        
         
     </section>
 
@@ -131,13 +112,14 @@
   export default {
     data () {
       return {
+        but:false, 
         switch1: false,
         switch2: false,
         items: ['Человечская музыка', 'Шрек musik', 'Jazz', 'Rock'],
         pays: [
           {
             name: '1:45:67',
-            calories: 159,
+            calories: 157,
           },
           {
             name: '1:45:67',

@@ -3,7 +3,7 @@
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
         <router-link to="/" style="text-decoration: none; color: white">
-          <span>POLL</span>
+          <span>Кванториада</span>
         </router-link>
         <span class="font-weight-light">s </span>
       </v-toolbar-title>

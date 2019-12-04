@@ -4,12 +4,12 @@
     max-width="400"
   >
     <v-img
-      src="https://craftboro.ru/wp-content/uploads/2019/07/16546/x5BYcUQtQfo.jpg"
+      src="https://img1.akspic.ru/image/87835-bashnya-noch-neboskreb-stolica-muzykant-1280x800.jpg"
       height="200px"
     ></v-img>
 
     <v-card-title>
-      ВЫ: Радиостанция
+      ВЫ: Освещение
     </v-card-title>
 
    
@@ -22,10 +22,10 @@
         
           
 
-       
+        
 
         <v-container fluid class="d-flex mb-0 pb-0">
-            <h3 class="pl-3">Громкость:</h3>
+            <h3 class="pl-3">Свет в домах %:</h3>
              
                
                 <v-slider
@@ -34,6 +34,13 @@
                 class="ma-0"
                 ></v-slider>
               
+        </v-container>
+        
+        
+        <v-container fluid class="d-flex mb-0 pb-0">
+            <h3 class="pl-3">Лампа на горе:</h3>
+            <span  @click="but2 = !but2"><v-switch  v-model="switch2" :label="``" class="ma-0 ml-3 pa-0" ></v-switch></span><span>{{but2 ? 'on' : 'off'}}</span>
+            
         </v-container>
         
     </section>
@@ -50,7 +57,7 @@
           <v-expansion-panel-content class="d-flex mb-0 pb-0">
               <section class="d-flex mb-0 pb-0">
               <span>Солненая Панель<br>3₽/кВт</span>
-            <v-switch v-model="switch2" :label="``" class="d-flex ma-0 ml-3 pa-0"></v-switch>
+            <v-switch v-model="switch3" :label="``" class="d-flex ma-0 ml-3 pa-0"></v-switch>
             <span>Аккумулятор<br>5₽/кВт</span>
               </section>
           </v-expansion-panel-content>
@@ -125,8 +132,10 @@
     data () {
       return {
         but:false, 
+        but2:false, 
         switch1: false,
         switch2: false,
+        switch3: false,
         items: ['Человечская музыка', 'Шрек musik', 'Jazz', 'Rock'],
         pays: [
           {

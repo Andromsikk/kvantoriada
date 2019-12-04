@@ -4,12 +4,12 @@
     max-width="400"
   >
     <v-img
-      src="https://craftboro.ru/wp-content/uploads/2019/07/16546/x5BYcUQtQfo.jpg"
+      src="https://cdn.pixabay.com/photo/2015/04/23/17/18/disney-736374__480.jpg"
       height="200px"
     ></v-img>
 
     <v-card-title>
-      ВЫ: Радиостанция
+      ВЫ: Сцена
     </v-card-title>
 
    
@@ -22,7 +22,14 @@
         
           
 
-       
+        <v-col class="d-flex ma-0 pa-0 algin-center" cols="12" sm="8">
+            <h3 class=" pl-6">Трек:</h3>
+            <v-select
+            :items="items"
+            label="Выберети музыку"
+            class="ma-0 pa-0 ml-3 "
+            ></v-select>
+        </v-col>
 
         <v-container fluid class="d-flex mb-0 pb-0">
             <h3 class="pl-3">Громкость:</h3>
