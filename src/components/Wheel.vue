@@ -35,7 +35,7 @@
       >
         <v-expansion-panel>
           <v-expansion-panel-header>Ваш тариф</v-expansion-panel-header>
-          <v-expansion-panel-content class="d-flex mb-0 pb-0">
+          <v-expansion-panel-content >
               <section class="d-flex mb-0 pb-0">
               <span>Солненая Панель<br>3₽/кВт</span>
             <v-switch v-model="switch2" :label="``" class="d-flex ma-0 ml-3 pa-0"></v-switch>
